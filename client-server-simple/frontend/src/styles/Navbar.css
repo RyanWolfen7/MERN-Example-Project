@@ -1,0 +1,10 @@
+.nav-wrapper {
+    display: grid;
+    grid-column: 1 / -1;
+    place-items: center;
+    background-color: lightblue;
+}
+
+.nav-title {
+    margin-bottom: 0;
+}

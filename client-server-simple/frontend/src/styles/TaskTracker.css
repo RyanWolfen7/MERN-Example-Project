@@ -1,0 +1,53 @@
+.tt-wrapper {
+    display: grid;
+}
+
+.tt-button-selection {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    gap: 1em;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.tt-button {
+    flex: auto;
+    width: 100%;
+}
+
+
+.tt-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+}
+
+.tt-list-container {
+    display: grid;
+    align-items: center;
+    background-color: beige;
+}
+
+.tt-list-header {
+    display: grid;
+    text-align: center;
+    margin: 1em;
+}
+
+.tt-list-card {
+    padding: 2rem;
+}
+
+.tt-list-card:hover {
+    background-color: azure;
+    cursor: pointer;
+}
+
+.tt-task-container {
+    position: sticky;
+    display: grid;
+    width: 100%;
+    grid-gap: 1em;
+}
