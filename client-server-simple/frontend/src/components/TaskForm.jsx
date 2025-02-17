@@ -18,7 +18,7 @@ const TaskForm = ({
 
     const handleSubmit = event => {
         event.preventDefault()
-        id ? patchTask({...form, id}) : postTask(form) 
+        id ? patchTask(id, form) : postTask(form) 
         cancel()
     }
 

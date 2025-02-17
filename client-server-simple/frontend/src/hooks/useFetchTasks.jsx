@@ -17,8 +17,8 @@ const useFetchTask = () => {
         setData(data)
     }
 
-    const patchTask = async (args) => {
-        const response = await fetch("http://localhost:8000/tasks", {
+    const patchTask = async (id, args) => {
+        const response = await fetch(`http://localhost:8000/tasks/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

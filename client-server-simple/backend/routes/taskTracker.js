@@ -42,6 +42,25 @@ taskRouter.post('/', validateTaskRequest, async (req, res) => {
     }
 })
 
+taskRouter.patch('/:id', async (req, res) => {
+    try {
+        const query = { _id: new ObjectId(req.params.id) };
+        const updates = {
+        $set: {
+            name: req.body.name,
+            position: req.body.position,
+            level: req.body.level,
+        },
+        };
+        let collection = await db.collection(TASK_COLLECTION);
+        let result = await collection.updateOne(query, updates);
+        res.send(result).status(201);
+    } catch(error) {
+        console.error(error);
+        res.status(500).send("Error updating record");
+    }
+})
+
 taskRouter.delete('/:id', async (req, res) => {
     try {
         const query = { _id: new ObjectId(req.params.id)}
